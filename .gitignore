@@ -11,3 +11,8 @@ pom.xml.asc
 .lein-plugins
 .lein-repl-history
 .project
+/.nrepl-port
+/.settings/ccw.repl.cmdhistory.prefs
+/resources
+/dev-resources
+/bin
