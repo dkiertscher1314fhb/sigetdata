@@ -6,13 +6,9 @@
             [me.raynes.fs :as fs])
   (:import [org.apache.commons.compress.compressors.gzip GzipCompressorInputStream]
            ;; http://commons.apache.org/proper/commons-compress/apidocs/org/apache/commons/compress/archivers/sevenz/SevenZFile.html#SevenZFile%28java.io.File,%20byte[]%29
-           [org.apache.commons.compress.archivers.sevenz.SevenZFile]
-           ;; http://sevenzipjbind.sourceforge.net/first_steps.html
            )
   ;;org.apache.commons.compress.compressors.SevenZFile
   (:gen-class :main true))
-
-
 
 ;; https://www.refheap.com/
 
