@@ -1,10 +1,5 @@
 (ns sigetdata.core-test
-  (:use clojure.test
-        midje.sweet
-        sigetdata.core)
-(:require [clojure.java.io :as io]
-          [me.raynes.fs :as fs]))
+  (:require [midje.sweet :refer :all])
+  (:require [clojure.test :refer :all])
+  (:require [sigetdata.core :refer :all]))
 
-
-
-(deftest meintest (throw (Exception.)))
