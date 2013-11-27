@@ -52,8 +52,8 @@
 (def wikifile "C:/wikidumps/dewiki-latest-pages-articles.xml.bz2")
 (def wikifile2 "C:/wikidumps/dewiki-20131008-stub-articles.xml.gz")
 (def wikifile3 "C:/wikidumps/dewiki-20131008-stub-articlest.7z")
-(def wikifile4 "R:\420\wikidumps\dewiki-20131008-pages-meta-history1.xml.bz2") 
-(def wikifile5 "C:\Users\Host\eclipse_workspace_sysint\sigetdata\dev-resources\dewiki-latest-pages-articles.xml.bz2")
+(def wikifile4 "R:/420/wikidumps/dewiki-20131008-pages-meta-history1.xml.bz2") 
+(def wikifile5 "C:/Users/Host/eclipse_workspace_sysint/sigetdata/dev-resources/dewiki-latest-pages-articles.xml.bz2")
 
 (defn -main
   [& args]

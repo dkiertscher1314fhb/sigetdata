@@ -1,6 +1,6 @@
 ; start unittest automation in a shell with
 ; lein repl
-; (use 'midje.repl) (autotest)
+; (ns sigetdata.core) (use 'midje.repl) (autotest)
 
 (ns sigetdata.core-test
   (:use clojure.test
