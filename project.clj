@@ -10,5 +10,3 @@
   :profiles {:dev {:dependencies [[midje "1.5.0"]]
                    :plugins [[lein-midje "3.0.0"]]}})
 
-; Set-Proxy-Envvar-FHB -off
-; Set-Proxy-Envvar-FHB
