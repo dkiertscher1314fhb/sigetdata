@@ -7,6 +7,6 @@
                  [org.clojure/data.zip "0.1.1"]
                  [org.clojure/data.xml "0.0.7"]
                  [me.raynes/fs "1.4.4"]]
-  :profiles {:dev {:dependencies [[midje "1.5.0"]]
+  :profiles {:dev {:dependencies [[midje "1.5.1"]]
                    :plugins [[lein-midje "3.0.0"]]}})
 
