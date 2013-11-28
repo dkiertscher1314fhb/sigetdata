@@ -37,10 +37,8 @@
   [filename max]
   ;todo later: choose decompression format according to file ending in filename
   (with-open [rdr (bz2-reader filename)]
-    (dorun (->> (xml/parse rdr)
-             :content
-             (take max)
-             (map process-music-artist-page)))))
+    (count (->> (xml/parse rdr)
+             :content ))))
 
 ; clojure.java.io resource function nutzen fuer projektrelative Pfade
 ; eine große Datei jedoch nicht nach bin kopieren, deshalb hier den kompletten Pfad
@@ -48,7 +46,12 @@
 
 (defn -main
   [& args]
-  (wiki-music-artists wikifile 1))
+  (wiki-music-artists wikifile 100))
+
+(defn count-pages 
+  "count number of pages in wikifile"
+  (wiki-music-artists wikifile 100))
+;3233673
 
 ;;http://clojuredocs.org/clojure_core/clojure.java.io/file
 
@@ -57,8 +60,10 @@
 
 ; * Vorgehen
 ; Datei entpacken b2zip, gzip, 7zip
-
-; die xml mit clojure.data.xml (StAX) in chunks (Artikel) aufteilen
+; Anzahl der Artikel ermitteln
+; die xml mit clojure.data.xml (StAX) in Chunks (Artikel) aufteilen
+; n Artikel im EDN-Format serialisieren und komprimiert abspeichern
+; Chunks paralellisiert verarbeiten
 
 ; jeden Artikel einzeln mit clojure.data.xml realisieren und Daten selektieren mit clojure get-in clojure
 ; oder selektieren mit Zipper
@@ -68,7 +73,6 @@
 
 ; https://gist.github.com/fmw/5490159
 ; https://gist.github.com/kornysietsma/5939456#file-wikiparse-clj-L11
-
 ; read first n elements
 ; check memory consumption and execution time
 ; count all elements
@@ -77,10 +81,6 @@
 
 
 ; https://www.refheap.com/
-
-; sevenz/SevenZArchiveEntry.html
-;; http://sevenzipjbind.sourceforge.net/snippets/GetNumberOfItemsInArchive.java
-;; http://citizen428.net/blog/2009/09/06/using-java-libraries-from-clojure
 
 ;; Zippers allow you to easily traverse a data structure
 
