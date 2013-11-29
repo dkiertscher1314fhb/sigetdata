@@ -5,6 +5,4 @@
   (:require [me.raynes.fs :as fs]))
 
 (facts "copy of wikifile available"
-       (fact (fs/exists? wikifile) => true)
-       (fact (fs/name wikifile) => "dewiki-latest-pages-articles.xml"))
-
+       (fact (fs/exists? wikifile) => true))
