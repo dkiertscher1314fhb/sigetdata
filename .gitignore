@@ -13,7 +13,5 @@ pom.xml.asc
 .project
 /.nrepl-port
 /.settings/ccw.repl.cmdhistory.prefs
-/resources
-/dev-resources
 /bin
 /tmp
