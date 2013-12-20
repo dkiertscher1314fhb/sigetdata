@@ -59,6 +59,7 @@
  ]
 
 ; Triple
+; http://de.slideshare.net/neo4j/data-modeling-with-neo4j
 :title :editedby :contributor
 :contributor :edited :title
 
@@ -69,6 +70,7 @@
 :contributor :editing :time
 
 ; Triple Abstraktion auf :timestamp
+; http://blog.neo4j.org/2012/02/modeling-multilevel-index-in-neoj4.html
 :yearmonth :has :yearmonthday
 :yearmonthday :belongsto :yearmonth
 
