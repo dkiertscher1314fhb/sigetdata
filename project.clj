@@ -6,7 +6,9 @@
   :dependencies [[org.clojure/clojure "1.5.1"]
                  [org.clojure/data.zip "0.1.1"]
                  [org.clojure/data.xml "0.0.7"]
-                 [me.raynes/fs "1.4.4"]]
-  :profiles {:dev {:dependencies [[midje "1.5.1"]]
+                 [me.raynes/fs "1.4.4"]
+                 [mysql/mysql-connector-java "5.1.27"]
+                 [org.clojure/java.jdbc "0.3.0-beta2"]]
+  :profiles {:dev {:dependencies [[midje "1.6.0"]]
                    :plugins [[lein-midje "3.0.0"]]}})
 
