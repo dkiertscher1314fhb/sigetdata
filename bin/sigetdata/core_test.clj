@@ -1,7 +1,12 @@
 (ns sigetdata.core-test
-  (:use clojure.test
-        sigetdata.core))
+  (:require [midje.sweet :refer :all])
+  (:require [clojure.test :refer :all])
+  (:require [sigetdata.core :refer :all])
+  (:require [me.raynes.fs :as fs]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+; test naming convention
+; function name - scenario - expected result / behaviour
+(facts "wikifile - for testing - available"
+       (fact (fs/exists? wikifile) => true))
+(facts "sql string - db create - correct format"
+       (fact (insertCategorySql testSqlFile) => sqlstring))
