@@ -1,15 +1,31 @@
+; Startphase
+; Creating a git repo for Eclipse project and Pushing to Github
+; http://www.youtube.com/watch?v=GMVQx2hzFng
+; wechsle in den gewuenschten git branch
+; https://github.com/Kunena/Kunena-Forum/wiki/Create-a-new-branch-with-git-and-manage-branches
+
+; start coding
 ; starte den REPL ueber Rechtsklick auf Eclipseprojektordner Run as Clojure Application
 
 ; start unittest automation by evaluating the call to midje
-(require 'midje.repl) ; https://github.com/marick/Midje https://github.com/marick/Midje/wiki/A-tutorial-introduction
+(require 'midje.repl) ; https://github.com/marick/Midje
 (midje.repl/autotest)
+
+; https://github.com/marick/Midje/wiki
+; https://github.com/marick/Midje/wiki/Future-facts
+; top down testing
+; https://github.com/marick/Midje/wiki/Top-down-testing
+; https://github.com/marick/Midje/wiki/The-idea-behind-top-down-development
+; https://github.com/marick/Midje/wiki/A-tutorial-introduction
+; https://github.com/marick/Midje/wiki/Metaconstants
+; https://github.com/marick/Midje/blob/master/test/as_documentation/prerequisites__the_basics.clj
 
 ; CCW changes the namespace for each evaluation to the namespace under which the code lies
 ; and after that switches back to the previous namespace just like pushd popd
 
 ; entferne vars von im REPL geladener Tests aus dem namespace
 
-; Eclipse external webbrowser
+; Eclipse use external webbrowser for urls in eclipse
 ; https://support.tasktop.com/hc/en-us/articles/200435116-How-do-I-configure-Eclipse-to-use-an-external-browser-
 
 ; network connection over proxy
