@@ -1,0 +1,62 @@
+* control Neo4j localy on Linux Fedora
+sudo /opt/neo4j-community-2.0.0/bin/neo4j status
+sudo /opt/neo4j-community-2.0.0/bin/neo4j start
+sudo /opt/neo4j-community-2.0.0/bin/neo4j stop
+ls /opt/neo4j-community-2.0.0/data/graph.db/
+sudo rm -r /opt/neo4j-community-2.0.0/data/graph.db/*
+
+open the Neo4j Webinterface  http://localhost:7474
+
+* install Neo4j on Linux Fedora
+  1. Neo4j
+     - http://www.neo4j.org/
+     - http://blog.neo4j.org/
+  2. Neo4j is currently only supported on Oracle JDK, you're running on OpenJDK.
+     1. get latest jdk 7 http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html
+     2. sudo yum install jdk-7u45-linux-x64.rpm
+        - http://www.if-not-true-then-false.com/2010/install-sun-oracle-java-jdk-jre-7-on-fedora-centos-red-hat-rhel/
+        - sudo rpm -Uvh jdk-7u45-linux-x64.rpm
+        - waehle Javavariante
+          - alternatives --help
+          - alternatives --install /usr/bin/java java /usr/java/latest/jre/bin/java 200000
+          - alternatives --display java
+          - sudo alternatives --config java
+  3. get neo4j
+     - http://www.neo4j.org/download/
+     - http://www.neo4j.org/download_thanks?edition=community&release=2.0.0&platform=unix
+  4. tar zxf neo4j-community-2.0.0-unix.tar.gz -C /opt/
+  5. export NEO4J_HOME=/opt/neo4j-community-2.0.0
+     - emacs ~/.bash_profile or emacs ~/.bashrc
+  6. sudo ./bin/neo4j install
+  7. create / select the user Neo4j will run as
+  8. service neo4j-service status start stop
+     - configure access rights for neo4j
+       - sudo chown neo4j:neo4j -R ./neo4j-community-2.0.0
+       - maybe grant access rights to user neo4j and home user group
+         - sudo chown neo4j:d -R ./neo4j-community-2.0.0
+         - read and write rights for all files in ./neo4j-community-2.0.0
+           - execution right for directories
+             find neo4j-community-2.0.0/ -type d -exec sudo chmod 770 {} \;
+           - read and write rights for all files
+             find neo4j-community-2.0.0/ -type f -exec sudo chmod g+rw {} \;
+  9. sudo /opt/neo4j-community-2.0.0/bin/neo4j start
+  10. summary
+  tar zxf /home/d/Downloads/neo4j-community-2.0.0-unix.tar.gz -C /opt/
+  export NEO4J_HOME=/opt/neo4j-community-2.0.0
+  /opt/neo4j-community-2.0.0/bin/neo4j-installer install
+  chown neo4j:neo4j -R ./neo4j-community-2.0.0
+  chown neo4j:d -R /opt/neo4j-community-2.0.0
+  find /opt/neo4j-community-2.0.0/ -type d -exec sudo chmod 770 {} \;
+  find /opt/neo4j-community-2.0.0/ -type f -exec sudo chmod g+rw {} \;
+  sudo /opt/neo4j-community-2.0.0/bin/neo4j start
+  sudo /opt/neo4j-community-2.0.0/bin/neo4j stop
+  ls -l /opt/neo4j-community-2.0.0/data
+  rm /opt/neo4j-community-2.0.0/data/graph.db
+* install Neo4j on Windows 7
+ 1. Neo4j http://www.neo4j.org/download/windows
+ 2. just install
+ 3. set environment variables
+* control Neo4j on Windows 7
+ 1. start via Windows Startmenu
+ 2. Open http://localhost:7474 for the Neo4j Browser.
+ 3. empty database by deleting database folder
