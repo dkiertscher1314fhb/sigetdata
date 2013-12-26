@@ -4,7 +4,10 @@ A Clojure library designed to ... well, that part is up to you.
 
 ## Usage
 
-FIXME
+## Komplexitätsabschätzung
+(+ 12 (* 12 (+ 1 12 365 (* 2 365 24))))
+(* 3233673 (+ (* 200 6) 2 6))
+
 
 ## License
 
