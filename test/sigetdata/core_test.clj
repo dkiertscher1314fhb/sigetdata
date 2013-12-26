@@ -8,7 +8,3 @@
 ; function name - scenario - expected result / behaviour
 (facts "wikifile - for testing - available"
        (fact (fs/exists? wikifile) => true))
-
-; Kategorien einer Wikipediaseite erfassen
-(facts "sql string - db create - correct format"
-       (fact (parseCategorySql testSqlFile) => sqlstring))
